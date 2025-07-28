@@ -38,7 +38,7 @@ class Var:
         raise ValueError("BIN_CHANNEL is required")
 
     PORT: int = int(os.getenv("PORT", "8080"))
-    BIND_ADDRESS: str = os.getenv("BIND_ADDRESS", "0.0.0.0")
+    BIND_ADDRESS: str = os.getenv("BIND_ADDRESS", "154.43.62.63")
     PING_INTERVAL: int = int(os.getenv("PING_INTERVAL", "840"))
     NO_PORT: bool = str_to_bool(os.getenv("NO_PORT", "True"))
     CACHE_SIZE: int = int(os.getenv("CACHE_SIZE", "100"))
