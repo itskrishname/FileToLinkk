@@ -31,7 +31,7 @@ class Var:
     WORKERS: int = int(os.getenv("WORKERS", "8"))
     TIMEOUT: int = int(os.getenv("TIMEOUT", "90"))
 
-    BIN_CHANNEL: int = int(os.getenv("BIN_CHANNEL", "0"))
+    BIN_CHANNEL: int = int(os.getenv("BIN_CHANNEL", "-1002659515511"))
 
     if not BIN_CHANNEL:
         logger.critical("BIN_CHANNEL is required")
@@ -48,7 +48,7 @@ class Var:
     if not OWNER_ID:
         logger.warning("WARNING: OWNER_ID is not set. No user will be granted owner access.")
 
-    OWNER_USERNAME: str = os.getenv("OWNER_USERNAME", "")
+    OWNER_USERNAME: str = os.getenv("OWNER_USERNAME", "@SECRECT_BOT_UPDATES")
 
     FQDN: str = os.getenv("FQDN", "") or BIND_ADDRESS
     HAS_SSL: bool = str_to_bool(os.getenv("HAS_SSL", "False"))
@@ -72,7 +72,7 @@ class Var:
 
     FORCE_CHANNEL_ID: Optional[int] = None
 
-    force_channel_env = os.getenv("FORCE_CHANNEL_ID", "").strip()
+    force_channel_env = os.getenv("FORCE_CHANNEL_ID", "-1002659515511").strip()
 
     if force_channel_env:
         try:
