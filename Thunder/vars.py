@@ -18,8 +18,8 @@ def str_to_int_set(val: str) -> Set[int]:
     return {int(x) for x in val.split() if x.isdigit()} if val else set()
 
 class Var:
-    API_ID: int = int(os.getenv("API_ID", ""))
-    API_HASH: str = os.getenv("API_HASH", "")
+    API_ID: int = int(os.getenv("API_ID", "24828197"))
+    API_HASH: str = os.getenv("API_HASH", "d36e278e89ebeb900aeda4128d413a77")
     BOT_TOKEN: str = os.getenv("BOT_TOKEN", "")
 
     if not all([API_ID, API_HASH, BOT_TOKEN]):
@@ -43,7 +43,7 @@ class Var:
     NO_PORT: bool = str_to_bool(os.getenv("NO_PORT", "True"))
     CACHE_SIZE: int = int(os.getenv("CACHE_SIZE", "100"))
 
-    OWNER_ID: int = int(os.getenv("OWNER_ID", ""))
+    OWNER_ID: int = int(os.getenv("OWNER_ID", "7660990923"))
 
     if not OWNER_ID:
         logger.warning("WARNING: OWNER_ID is not set. No user will be granted owner access.")
@@ -58,7 +58,7 @@ class Var:
 
     SET_COMMANDS: bool = str_to_bool(os.getenv("SET_COMMANDS", "True"))
 
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "")
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "mongodb+srv://Krishna:krishna@cluster0.ecime.mongodb.net/")
 
     if not DATABASE_URL:
         logger.critical("DATABASE_URL is required")
