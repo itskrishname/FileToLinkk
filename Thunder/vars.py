@@ -50,7 +50,7 @@ class Var:
 
     OWNER_USERNAME: str = os.getenv("OWNER_USERNAME", "@SECRECT_BOT_UPDATES")
 
-    FQDN: str = os.getenv("FQDN", "") or BIND_ADDRESS
+    FQDN: str = os.getenv("FQDN", "154.43.62.63:8080") or BIND_ADDRESS
     HAS_SSL: bool = str_to_bool(os.getenv("HAS_SSL", "False"))
     PROTOCOL: str = "https" if HAS_SSL else "http"
     PORT_SEGMENT: str = "" if NO_PORT else f":{PORT}"
